@@ -31,7 +31,7 @@ class HomePageCubit extends Cubit<HomePageState> {
     final result = await deleteClienteUserCase(clienteId);
     result.fold(
       (erro) => emit(HomePageErro()),
-      (clientes) {
+      (result) {
         emit(HomePageClienteDeletado());
       },
     );

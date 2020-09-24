@@ -24,7 +24,16 @@ class CreateClienteScreen extends StatelessWidget {
       body: BlocProvider<CreateClienteCubit>(
         create: (_) => dependencia<CreateClienteCubit>(),
         child: BlocConsumer<CreateClienteCubit, CreateClienteState>(
-          listener: (context, state) {},
+          listener: (context, state) {
+            if (state is CreateClienteSucesso) {
+              Scaffold.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('O cliente foi criado com Sucesso!'),
+                ),
+              );
+              clearForm(formKey);
+            }
+          },
           builder: (context, state) {
             return Form(
               key: formKey,
@@ -106,5 +115,9 @@ class CreateClienteScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void clearForm(GlobalKey<FormState> formkey) {
+    formkey.currentState.reset();
   }
 }

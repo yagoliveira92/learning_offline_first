@@ -23,16 +23,17 @@ class _HomePageState extends State<HomePage> {
         title: Text('Learning Offline First'),
         actions: <Widget>[
           Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/create-cliente');
-                },
-                child: Icon(
-                  Icons.person_add,
-                  size: 26.0,
-                ),
-              )),
+            padding: EdgeInsets.only(right: 20),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/create-cliente');
+              },
+              child: Icon(
+                Icons.person_add,
+                size: 26.0,
+              ),
+            ),
+          ),
         ],
       ),
       body: BlocProvider<HomePageCubit>(
@@ -43,6 +44,7 @@ class _HomePageState extends State<HomePage> {
               Scaffold.of(context).showSnackBar(
                 SnackBar(content: Text('O cliente foi excluído!')),
               );
+              context.bloc<HomePageCubit>().getAllCliente();
             }
           },
           builder: (context, state) {
