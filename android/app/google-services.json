@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "881852258711",
+    "firebase_url": "https://learning-offline-first.firebaseio.com",
+    "project_id": "learning-offline-first",
+    "storage_bucket": "learning-offline-first.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881852258711:android:d080681668493a15580cd2",
+        "android_client_info": {
+          "package_name": "info.tecnocamp.learning_offline_first"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881852258711-n9nhfs7iocmkga8lbl6hs1n0uqub15r2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkXU003hnoAZIAlW5ZDFWNwKEZ1A2lW-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881852258711-n9nhfs7iocmkga8lbl6hs1n0uqub15r2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
