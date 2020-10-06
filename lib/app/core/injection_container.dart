@@ -1,7 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:learning_offline_first/app/core/firebase_instance.dart';
 import 'package:learning_offline_first/app/features/create/data/datasources/create_cliente_datasource.dart';
-import 'package:learning_offline_first/app/features/create/data/repositories/create_cliente_decode_helper.dart';
 import 'package:learning_offline_first/app/features/create/data/repositories/create_cliente_repository.dart';
 import 'package:learning_offline_first/app/features/create/domain/repositories/icreate_cliente_repository.dart';
 import 'package:learning_offline_first/app/features/create/domain/usecases/create_cliente_user_case.dart';
@@ -27,8 +26,6 @@ Future<void> init() async {
     ),
   );
 
-  dependencia.registerFactory(() => CreateClienteDecodeHelper());
-
   dependencia.registerFactory(
     () => CreateClienteCubit(
       criarClienteUserCase: dependencia(),
@@ -38,7 +35,6 @@ Future<void> init() async {
   dependencia.registerFactory<ICreateClienteRepository>(
     () => CreateClienteRepository(
       clienteDataSource: dependencia(),
-      clienteDecodeHelper: dependencia(),
     ),
   );
 

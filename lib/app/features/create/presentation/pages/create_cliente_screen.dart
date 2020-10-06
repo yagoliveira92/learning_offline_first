@@ -40,6 +40,8 @@ class CreateClienteScreen extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
+                    key: formKey,
+                    initialValue: '',
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter some text';
@@ -53,6 +55,8 @@ class CreateClienteScreen extends StatelessWidget {
                     ),
                   ),
                   TextFormField(
+                    key: formKey,
+                    initialValue: '',
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter some text';
@@ -67,6 +71,8 @@ class CreateClienteScreen extends StatelessWidget {
                     ),
                   ),
                   TextFormField(
+                    key: formKey,
+                    initialValue: '',
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter some text';
@@ -81,6 +87,7 @@ class CreateClienteScreen extends StatelessWidget {
                     ),
                   ),
                   TextFormField(
+                    initialValue: '',
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter some text';
