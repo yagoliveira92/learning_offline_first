@@ -8,11 +8,11 @@ class CreateClienteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
-    final nomeController = TextEditingController();
-    final telefoneController = TextEditingController();
-    final emailController = TextEditingController();
-    final enderecoController = TextEditingController();
+    GlobalKey<FormState> formKey = GlobalKey<FormState>();
+    final nomeController = TextEditingController(text: '');
+    final telefoneController = TextEditingController(text: '');
+    final emailController = TextEditingController(text: '');
+    final enderecoController = TextEditingController(text: '');
     return Scaffold(
       appBar: AppBar(
         title: Text('Criar Cliente'),
@@ -40,8 +40,7 @@ class CreateClienteScreen extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
-                    key: formKey,
-                    initialValue: '',
+                    key: UniqueKey(),
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter some text';
@@ -55,8 +54,7 @@ class CreateClienteScreen extends StatelessWidget {
                     ),
                   ),
                   TextFormField(
-                    key: formKey,
-                    initialValue: '',
+                    key: UniqueKey(),
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter some text';
@@ -71,8 +69,7 @@ class CreateClienteScreen extends StatelessWidget {
                     ),
                   ),
                   TextFormField(
-                    key: formKey,
-                    initialValue: '',
+                    key: UniqueKey(),
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter some text';
@@ -87,7 +84,6 @@ class CreateClienteScreen extends StatelessWidget {
                     ),
                   ),
                   TextFormField(
-                    initialValue: '',
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter some text';

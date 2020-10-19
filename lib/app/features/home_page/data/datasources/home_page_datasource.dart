@@ -12,6 +12,7 @@ class HomePageDataSource {
     try {
       var clientesDocuments =
           await firebaseInstance.clientesCollectionReference.get();
+
       return ApiSuccess(sucesso: clientesDocuments);
     } catch (erro) {
       return ApiError(mensagem: erro.toString());

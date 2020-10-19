@@ -1,16 +1,24 @@
-import 'package:meta/meta.dart';
+import 'package:hive/hive.dart';
 
-class ClienteEntity {
+part 'cliente_entity.g.dart';
+
+@HiveType(typeId: 0)
+class ClienteEntity extends HiveObject {
   ClienteEntity({
     this.id,
-    @required this.nome,
-    @required this.telefone,
-    @required this.email,
-    @required this.endereco,
+    this.nome,
+    this.telefone,
+    this.email,
+    this.endereco,
   });
+  @HiveField(0)
   String id;
+  @HiveField(1)
   String nome;
+  @HiveField(2)
   String telefone;
+  @HiveField(3)
   String email;
+  @HiveField(4)
   String endereco;
 }

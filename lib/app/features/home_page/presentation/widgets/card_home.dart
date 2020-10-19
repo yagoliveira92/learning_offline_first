@@ -1,4 +1,4 @@
-import 'package:learning_offline_first/app/core/data/models/cliente_model.dart';
+import 'package:learning_offline_first/app/core/domain/entities/cliente_entity.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,7 @@ class CardCliente extends StatelessWidget {
       @required this.chave,
       @required this.funcaoDismissed});
 
-  final ClienteModel cliente;
+  final ClienteEntity cliente;
   final VoidCallback navegacaoEditar;
   final VoidCallback funcaoParaExcluir;
   final VoidCallback funcaoDismissed;

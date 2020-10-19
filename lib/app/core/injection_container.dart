@@ -1,4 +1,6 @@
 import 'package:get_it/get_it.dart';
+import 'package:learning_offline_first/app/api/connectivity_status.dart';
+import 'package:learning_offline_first/app/core/datasource/database_datasource.dart';
 import 'package:learning_offline_first/app/core/firebase_instance.dart';
 import 'package:learning_offline_first/app/features/create/data/datasources/create_cliente_datasource.dart';
 import 'package:learning_offline_first/app/features/create/data/repositories/create_cliente_repository.dart';
@@ -24,6 +26,14 @@ Future<void> init() async {
     () => CreateClienteDataSource(
       firebaseInstance: dependencia(),
     ),
+  );
+
+  dependencia.registerLazySingleton(
+    () => DatabaseDataSource(),
+  );
+
+  dependencia.registerFactory(
+    () => ConnectivityStatus(),
   );
 
   dependencia.registerFactory(
@@ -59,8 +69,9 @@ Future<void> init() async {
 
   dependencia.registerFactory<IHomePageRepository>(
     () => HomePageRepository(
-      homePageDataSource: dependencia(),
-    ),
+        homePageDataSource: dependencia(),
+        databaseDataSource: dependencia(),
+        connectivityStatus: dependencia()),
   );
 
   dependencia.registerFactory(
