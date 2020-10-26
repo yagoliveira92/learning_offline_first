@@ -3,7 +3,7 @@ import 'package:learning_offline_first/app/api/api_sucess_result.dart';
 import 'package:learning_offline_first/app/api/connectivity_status.dart';
 import 'package:learning_offline_first/app/api/erro_api.dart';
 import 'package:learning_offline_first/app/core/data/models/cliente_model.dart';
-import 'package:learning_offline_first/app/core/datasource/database_datasource.dart';
+import 'package:learning_offline_first/app/core/database/database_datasource.dart';
 import 'package:learning_offline_first/app/core/domain/entities/cliente_entity.dart';
 import 'package:learning_offline_first/app/features/home_page/data/datasources/home_page_datasource.dart';
 import 'package:learning_offline_first/app/features/home_page/domain/repositories/ihome_page_repository.dart';

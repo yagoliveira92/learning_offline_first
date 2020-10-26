@@ -33,19 +33,21 @@ dependencies:
   firebase_core: ^0.5.0
   cloud_firestore: ^0.14.0+2
   firebase_storage: ^4.0.0
-  path: ^1.7.0
   get_it: ^4.0.4
   dartz: ^0.9.1
   hive: ^1.4.4
   hive_flutter: ^0.3.1
   path_provider: ^1.6.18
-  connectivity: ^0.4.9+3
+  data_connection_checker: ^0.3.4
+  meta: ^1.2.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  hive_generator: ^0.8.1
-  build_runner: ^1.10.3
+  test: any
+  mockito: ^4.1.2
+  hive_generator: ^0.7.3
+  build_runner: ^1.10.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

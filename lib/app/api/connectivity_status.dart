@@ -1,12 +1,9 @@
-import 'package:connectivity/connectivity.dart';
+import 'package:data_connection_checker/data_connection_checker.dart';
 
 class ConnectivityStatus {
   Future<bool> checkConnectivity() async {
-    var connectivityResult = await (Connectivity().checkConnectivity());
-    if (connectivityResult != ConnectivityResult.none) {
-      return true;
-    } else {
-      return false;
-    }
+    return await DataConnectionChecker()
+        .hasConnection
+        .timeout(Duration(seconds: 5));
   }
 }

@@ -36,6 +36,7 @@ class ClienteModel extends ClienteEntity {
 
   Map<String, dynamic> toMap() {
     return {
+      'id': id,
       'nome': nome,
       'telefone': telefone,
       'email': email,

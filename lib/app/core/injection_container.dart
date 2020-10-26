@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:learning_offline_first/app/api/connectivity_status.dart';
-import 'package:learning_offline_first/app/core/datasource/database_datasource.dart';
+import 'package:learning_offline_first/app/core/database/database_datasource.dart';
 import 'package:learning_offline_first/app/core/firebase_instance.dart';
 import 'package:learning_offline_first/app/features/create/data/datasources/create_cliente_datasource.dart';
 import 'package:learning_offline_first/app/features/create/data/repositories/create_cliente_repository.dart';
